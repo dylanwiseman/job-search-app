@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Job Finder</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/bvy0zuj.css" />
   </head>
   <body>
-    <button onclick="showWebDevJobs();return false">Web Development</button>
-    <button onclick="showJavascriptJobs();return false">Javascript</button>
-    <button onclick="showFrontEndJobs();return false">Front End</button>
-    <button onclick="showFullStackJobs();return false">Full Stack</button>
-    <button onclick="showBackEndJobs();return false">Back End</button>
-    <button onclick="showPythonJobs();return false">Python</button>
-    <button onclick="showJavaJobs();return false">Java</button>
+    <header>
+      <h1>Job Finder</h1>
+    </header>
+    <div id="buttons">
+      <button onclick="showWebDevJobs();return false">Web Development</button>
+      <button onclick="showJavascriptJobs();return false">Javascript</button>
+      <button onclick="showFrontEndJobs();return false">Front End</button>
+      <button onclick="showFullStackJobs();return false">Full Stack</button>
+      <button onclick="showBackEndJobs();return false">Back End</button>
+      <button onclick="showPythonJobs();return false">Python</button>
+      <button onclick="showJavaJobs();return false">Java</button>
+    </div>
+
+    <div id="job-list">Choose an option to search for jobs!</div>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
