@@ -18,10 +18,14 @@ body {
   border-radius: 4px;
 }
 
+#job {
+  color: #ff0054;
+  font-style: italic;
+}
+
 header {
-  width: 50%;
-  text-align: center;
-  margin: 0 auto;
+  width: 60%;
+  margin: 2em auto;
 }
 
 #buttons {
@@ -34,7 +38,8 @@ h1 {
   font-family: zenon, sans-serif;
   font-weight: 900;
   font-style: normal;
-  margin: 1em;
+  margin: 0em 1em 0em 0;
+  display: inline;
 }
 
 h3 {
@@ -49,19 +54,34 @@ h4 {
   font-family: zenon, sans-serif;
   font-weight: 500;
   font-style: italic;
+  display: inline;
 }
 
+#sub-header {
+  display: inline;
+}
 p {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding-top: 0.6em;
+  border-top: dashed 2px #7353ba;
+  margin-top: 0.3em;
 }
 
 a {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: italic;
+  color: #ff0054;
+  text-decoration: none;
 }
+a:hover {
+  letter-spacing: 0.1em;
+  transition: ease-in-out 0.4s;
+  color: #85002c;
+}
+
 button {
   -webkit-transform: skewX(-10deg);
   -moz-transform: skewX(-10deg);
@@ -83,6 +103,9 @@ button:hover {
   background-color: #5a4091;
   box-shadow: 0.2em 0.2em 0 #85002c;
   color: lightgray;
+}
+#job-list {
+  margin-bottom: 1em;
 }
 
 /* .job-card:hover {

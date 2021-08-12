@@ -12,24 +12,53 @@ const URLs = {
   adzunaSoftwareEngineerURL: `$https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${adzunaID}&app_key=${adzunaKey}&results_per_page=50&what_phrase=software%20engineer&what_exclude=senior%20manager%20sr%20principal%20&max_days_old=30&salary_include_unknown=1&full_time=1&permanent=1`,
 };
 let container = document.getElementById("job-list");
+const buttonsArray = document.querySelectorAll("button");
 
-const showWebDevJobs = () => {
+const showJobs = (event) => {
+  let endpoint = "";
+  let targetBtn = event.target.textContent.trim();
+  if (targetBtn === "Web Development") {
+    endpoint = URLs.adzunaWebDevURL;
+  } else if (targetBtn === "Javascript") {
+    endpoint = URLs.adzunaJavascriptURL;
+  } else if (targetBtn === "Front End") {
+    endpoint = URLs.adzunaFrontEndURL;
+  } else if (targetBtn === "Full Stack") {
+    endpoint = URLs.adzunaFullStackURL;
+  } else if (targetBtn === "Back End") {
+    endpoint = URLs.adzunaBackEndURL;
+  } else if (targetBtn === "Python") {
+    endpoint = URLs.adzunaPythonURL;
+  } else if (targetBtn === "Java") {
+    endpoint = URLs.adzunaJavaURL;
+  } else {
+    console.log("WTF?");
+  }
   axios
-    .get(`${URLs.adzunaWebDevURL}`)
+    .get(endpoint)
     .then((res) => {
       createJobCards(res);
     })
     .catch((err) => console.log("Error: " + err));
 };
 
-const showJavascriptJobs = () => {
-  axios
-    .get(`${URLs.adzunaJavascriptURL}`)
-    .then((res) => {
-      createJobCards(res);
-    })
-    .catch((err) => console.log("Error: " + err));
-};
+// const showWebDevJobs = () => {
+//   axios
+//     .get(`${URLs.adzunaWebDevURL}`)
+//     .then((res) => {
+//       createJobCards(res);
+//     })
+//     .catch((err) => console.log("Error: " + err));
+// };
+
+// const showJavascriptJobs = () => {
+//   axios
+//     .get(`${URLs.adzunaJavascriptURL}`)
+//     .then((res) => {
+//       createJobCards(res);
+//     })
+//     .catch((err) => console.log("Error: " + err));
+// };
 
 const createJobCards = (res) => {
   container.innerHTML = "";
@@ -45,8 +74,7 @@ const createJobCards = (res) => {
     company.textContent = job.company.display_name;
     description.textContent = job.description;
     link.href = job.redirect_url;
-    link.textContent = "link";
-    // console.log(jobTitle.textContent, company.textContent);
+    link.textContent = "view job posting =>";
     container.appendChild(jobCard);
     jobCard.appendChild(jobTitle);
     jobCard.appendChild(company);
@@ -54,6 +82,12 @@ const createJobCards = (res) => {
     jobCard.appendChild(link);
   });
 };
+
+const setEventListeners = () => {
+  [...buttonsArray].map((i) => i.addEventListener("click", showJobs));
+};
+
+setEventListeners();
 
 // Tried using async/await:
 
