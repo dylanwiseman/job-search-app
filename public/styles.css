@@ -4,13 +4,18 @@
 }
 
 body {
-  background-color: rgb(167, 112, 167);
+  color: #efc3f5;
+  background-color: #2f195f;
 }
 
 .job-card {
   width: 50%;
   margin: 1em auto;
   padding: 0.5em;
+  border: none;
+  background-color: #0f1020;
+  box-shadow: 0.2em 0.2em 0 #7353ba;
+  border-radius: 4px;
 }
 
 header {
@@ -21,28 +26,27 @@ header {
 
 #buttons {
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   text-align: center;
 }
 
 h1 {
-  font-family: proxima-nova, sans-serif;
-
-  font-weight: 700;
-
+  font-family: zenon, sans-serif;
+  font-weight: 900;
   font-style: normal;
+  margin: 1em;
 }
 
 h3 {
-  font-family: proxima-nova, sans-serif;
+  font-family: zenon, sans-serif;
 
-  font-weight: 700;
+  font-weight: 500;
 
   font-style: normal;
 }
 
 h4 {
-  font-family: proxima-nova, sans-serif;
+  font-family: zenon, sans-serif;
   font-weight: 500;
   font-style: italic;
 }
@@ -58,3 +62,32 @@ a {
   font-weight: 400;
   font-style: italic;
 }
+button {
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  color: white;
+  background-color: #7353ba;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  padding: 0.2em 1em 0.2em 1em;
+  box-shadow: 0.2em 0.2em 0 #ff0054;
+  border-radius: 2px;
+  margin: 0 0.2em;
+}
+button:hover {
+  transform: translateY(2px);
+  background-color: #5a4091;
+  box-shadow: 0.2em 0.2em 0 #85002c;
+  color: lightgray;
+}
+
+/* .job-card:hover {
+  transform: translateY(2px);
+  transform: translateX(2px);
+  box-shadow: none;
+  transition: ease-in-out 0.2s;
+} */
