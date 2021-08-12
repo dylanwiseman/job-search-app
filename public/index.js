@@ -42,24 +42,6 @@ const showJobs = (event) => {
     .catch((err) => console.log("Error: " + err));
 };
 
-// const showWebDevJobs = () => {
-//   axios
-//     .get(`${URLs.adzunaWebDevURL}`)
-//     .then((res) => {
-//       createJobCards(res);
-//     })
-//     .catch((err) => console.log("Error: " + err));
-// };
-
-// const showJavascriptJobs = () => {
-//   axios
-//     .get(`${URLs.adzunaJavascriptURL}`)
-//     .then((res) => {
-//       createJobCards(res);
-//     })
-//     .catch((err) => console.log("Error: " + err));
-// };
-
 const createJobCards = (res) => {
   container.innerHTML = "";
   console.log("createJobsFunction!");
@@ -74,6 +56,7 @@ const createJobCards = (res) => {
     company.textContent = job.company.display_name;
     description.textContent = job.description;
     link.href = job.redirect_url;
+    link.target = "_blank";
     link.textContent = "view job posting =>";
     container.appendChild(jobCard);
     jobCard.appendChild(jobTitle);
