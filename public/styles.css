@@ -108,6 +108,35 @@ button:hover {
   margin-bottom: 1em;
 }
 
+@keyframes colors {
+  0% {
+    color: #ff0054;
+  }
+  20% {
+    color: #efc3f5;
+  }
+  40% {
+    color: white;
+  }
+  60% {
+    color: #7353ba;
+  }
+  80% {
+    color: yellow;
+  }
+  100% {
+    color: black;
+  }
+}
+
+#loading {
+  display: none;
+  text-align: center;
+  animation-name: colors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
 /* .job-card:hover {
   transform: translateY(2px);
   transform: translateX(2px);

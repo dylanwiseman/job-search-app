@@ -13,8 +13,10 @@ const URLs = {
 };
 let container = document.getElementById("job-list");
 const buttonsArray = document.querySelectorAll("button");
+const loader = document.getElementById("loading");
 
 const showJobs = (event) => {
+  loader.style.display = "block";
   let endpoint = "";
   let targetBtn = event.target.textContent.trim();
   if (targetBtn === "Web Development") {
@@ -38,6 +40,7 @@ const showJobs = (event) => {
     .get(endpoint)
     .then((res) => {
       createJobCards(res);
+      loader.style.display = "none";
     })
     .catch((err) => console.log("Error: " + err));
 };
