@@ -1,4 +1,7 @@
-const { adzunaID, adzunaKey } = adzunaConfig;
+// const { adzunaID, adzunaKey } = adzunaConfig;
+const adzunaID = process.env.API_ID;
+const adzunaKey = process.env.API_KEY;
+
 const URLs = {
   adzunaBaseURL: `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${adzunaID}&app_key=${adzunaKey}&results_per_page=50&`,
   adzunaURLEnd: `&what_exclude=senior%20manager%20sr%20principal%20&max_days_old=30&salary_include_unknown=1&full_time=1&permanent=1`,
