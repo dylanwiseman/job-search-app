@@ -20,6 +20,7 @@ const buttonsArray = document.querySelectorAll("button");
 const loader = document.getElementById("loading");
 
 const showJobs = (event) => {
+  console.log("clicked");
   loader.style.display = "block";
   let endpoint = "";
   let targetBtn = event.target.textContent.trim();
