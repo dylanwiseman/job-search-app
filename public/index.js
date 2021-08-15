@@ -1,5 +1,5 @@
 // const { adzunaID, adzunaKey } = adzunaConfig;
-import { keys } from "../server/server";
+import { keys } from "../server/configs.js";
 const adzunaID = keys.API_ID;
 const adzunaKey = keys.API_KEY;
 
