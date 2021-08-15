@@ -1,7 +1,7 @@
 // const { adzunaID, adzunaKey } = adzunaConfig;
-// import { keys } from "../server/configs.js";
-// const adzunaID = keys.API_ID;
-// const adzunaKey = keys.API_KEY;
+import { keys } from "../server/configs.js";
+const adzunaID = keys.API_ID;
+const adzunaKey = keys.API_KEY;
 
 const URLs = {
   adzunaBaseURL: `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${adzunaID}&app_key=${adzunaKey}&results_per_page=50&`,
