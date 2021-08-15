@@ -15,6 +15,9 @@ app.get("/", (req, res) => {
 
 // Setup server:
 const port = process.env.PORT || 4005;
+const keys = { adzunaID: process.env.API_ID, adzunaKey: process.env.API_KEY };
+
+export { keys };
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
