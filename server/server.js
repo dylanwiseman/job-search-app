@@ -20,6 +20,6 @@ app.listen(port, () => {
   console.log(`Server is running on ${port}`);
 });
 
-// const keys = { adzunaID: process.env.API_ID, adzunaKey: process.env.API_KEY };
+const keys = { adzunaID: process.env.API_ID, adzunaKey: process.env.API_KEY };
 
-// export { keys };
+export { keys };
