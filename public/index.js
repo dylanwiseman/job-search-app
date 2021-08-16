@@ -1,8 +1,8 @@
-// const { adzunaID, adzunaKey } = adzunaConfig;
-require("dotenv").config();
-const { API_KEY, API_ID } = process.env;
-const adzunaID = API_ID;
-const adzunaKey = API_KEY;
+const adzunaConfig = {
+  adzunaKey: "b3d1bd0bd926d6cefa60eae1358b2439",
+  adzunaID: "d64588da",
+};
+const { adzunaID, adzunaKey } = adzunaConfig;
 
 const URLs = {
   adzunaBaseURL: `https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=${adzunaID}&app_key=${adzunaKey}&results_per_page=50&`,
