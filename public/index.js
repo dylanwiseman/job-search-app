@@ -1,6 +1,5 @@
 // const { adzunaID, adzunaKey } = adzunaConfig;
 require("dotenv").config();
-import { keys } from "../server/configs.js";
 const { API_KEY, API_ID } = process.env;
 const adzunaID = API_ID;
 const adzunaKey = API_KEY;
