@@ -1,4 +1,4 @@
-# job-search-app
+# Job Finder
 
 Click one of the buttons to search for a job in that category! 
 
